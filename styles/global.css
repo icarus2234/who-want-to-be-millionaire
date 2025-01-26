@@ -1,0 +1,22 @@
+:root {
+    --orange-120: #E87928;
+    --orange-100: #FF8B37;
+    --orange-80: #FFAC70;
+    --orange-5: #FFF3EB;
+    --green-100: #47D867;
+    --green-5: #E6FAEA;
+    --red-100: #EC6259;
+    --red-5: #FDEEED;
+    --black-100: #2ecc71;
+    --black-40: #34495e;
+    --black-5: #34495e;
+    --white-100: #ffffff;
+    --font-size: 20px;
+    --line-height: 24px;
+}
+
+
+body {
+    font-size: var(--font-size);
+    line-height: var(--line-height);
+}

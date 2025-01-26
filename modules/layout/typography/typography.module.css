@@ -1,0 +1,41 @@
+.heading1 {
+    font-size: 56px;
+    line-height: 65px;
+    font-weight: 600;
+    color: var(--black-100);
+}
+
+.heading2 {
+    font-size: 32px;
+    line-height: 37px;
+    font-weight: 600;
+    color: var(--black-100);
+}
+
+
+.body {
+    font-size: 32px;
+    line-height: 37px;
+    font-weight: 400;
+    color: var(--black-100);
+}
+
+/* Media query for 4K screens */
+@media  (max-width: 375px) and (max-height: 667px) {
+    .heading1 {
+        font-size: 32px;
+        line-height: 37px;
+        color: var(--black-100);
+    }
+
+    .heading2 {
+        font-size: 18px;
+        line-height: 20px;
+        font-weight: 600;
+    }
+
+    .body {
+        font-size: 14px;
+        line-height: 16px;
+    }
+}

@@ -1,0 +1,12 @@
+.home {
+    background: linear-gradient(45deg, var(--white-100) 50%, var(--orange-5) 50%);
+}
+
+.quiz {
+    background-color: var(--black-5);
+
+}
+
+.default {
+    background: #f5f5f5;
+}

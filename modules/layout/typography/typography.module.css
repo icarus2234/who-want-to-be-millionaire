@@ -20,22 +20,22 @@
     color: var(--black-100);
 }
 
-/* Media query for 4K screens */
-@media  (max-width: 375px) and (max-height: 667px) {
+.body2 {
+    font-size: 20px;
+    line-height: 24px;
+    font-weight: 400;
+    color: var(--black-100);
+}
+
+/* Mobile styles */
+@media (max-width: 767px) {
     .heading1 {
         font-size: 32px;
         line-height: 37px;
-        color: var(--black-100);
     }
 
     .heading2 {
         font-size: 18px;
         line-height: 20px;
-        font-weight: 600;
-    }
-
-    .body {
-        font-size: 14px;
-        line-height: 16px;
     }
 }

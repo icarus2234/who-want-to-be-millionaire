@@ -5,4 +5,4 @@
 .storybook
 build
 node_modules
-generated
+

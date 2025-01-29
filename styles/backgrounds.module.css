@@ -1,5 +1,6 @@
 .home {
-    background: linear-gradient(45deg, var(--white-100) 50%, var(--orange-5) 50%);
+    height: 100vh;
+    background: linear-gradient(to right bottom, var(--white-100) 50%, var(--orange-5) 50%);
 }
 
 .quiz {

@@ -1,0 +1,30 @@
+.button {
+  width: 296px;
+  background-color: var(--orange-100);
+  color: var(--white-100); 
+  font-size: 20px; 
+  font-weight: 600; 
+  padding: 20px; 
+  border-radius: 12px; 
+  cursor: pointer; 
+  border: none;
+
+}
+
+.button:hover {
+  background-color: var(--orange-80);
+}
+
+.button:active {
+  background-color: var(--orange-120); 
+  
+}
+
+@media (max-width: 767px) {
+  .button {
+    font-size: 14px;
+    line-height: 16px;
+    width: 100%;
+
+  }
+}

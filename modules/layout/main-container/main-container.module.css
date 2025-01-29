@@ -1,21 +1,4 @@
 .mainContainer {
-    padding: 20px;
-    margin: 0 auto;
-    max-width: 1200px;
+    height: calc(100vh - 40px);
 }
 
-/* Media query for 4K screens */
-@media (min-width: 3840px) {
-    .mainContainer {
-        max-width: 3000px;
-        padding: 40px;
-    }
-}
-
-/* Media query for iPhone 8 */
-@media (max-width: 375px) and (max-height: 667px) {
-    .mainContainer {
-        padding: 10px;
-        max-width: 100%;
-    }
-}

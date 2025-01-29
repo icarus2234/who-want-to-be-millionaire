@@ -1,23 +1,102 @@
-.button {
+.answerOptionContainer {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     position: relative;
-    background: red;
-    box-sizing: border-box;
-    color: #082567;
-    /* Deep blue text */
-    font-size: 18px;
-    /* Slightly large text */
-    font-weight: bold;
-    width: 240px;
-    height: 32px;
-    text-transform: uppercase;
-    text-align: center;
-
-    border: none;
-    cursor: pointer;
-    background: url('data:image/svg+xml,<svg width="240" height="32" viewBox="0 0 240 32" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M21.4944 0.5H218.506C221.474 0.5 224.328 1.64809 226.47 3.70404L239.278 16L226.47 28.296C224.328 30.3519 221.474 31.5 218.506 31.5H21.4944C18.5256 31.5 15.6719 30.3519 13.5303 28.296L0.721988 16L13.5303 3.70404C15.6719 1.64809 18.5256 0.5 21.4944 0.5Z" fill="white" stroke="%23D0D0D8"/></svg>') no-repeat center center;
-    background-size: cover;
-
 }
 
 
+.answerOption {
+    box-sizing: border-box;
+    color: var(--black-100);
+    font-size: 20px;
+    line-height: 24px;
+    padding: 10px 20px 10px 50px;
+    width: 374px;
+    height: 72px;
+    text-align: left;
+    border: none;
+    cursor: pointer;
+    background: url('data:image/svg+xml,<svg width="373" height="72" viewBox="0 0 373 72" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M22.7172 5.28344C24.8781 2.28016 28.3521 0.5 32.052 0.5H340.948C344.648 0.5 348.122 2.28016 350.283 5.28344L372.384 36L350.283 66.7166C348.122 69.7198 344.648 71.5 340.948 71.5H32.052C28.3521 71.5 24.8781 69.7198 22.7172 66.7166L0.615976 36L22.7172 5.28344Z" fill="white" stroke="%23D0D0D8"/></svg>');
+    background-size: cover;
+}
 
+.answerOption:hover:not(.selected):not(.correct):not(.incorrect) {
+    background: url('data:image/svg+xml,<svg width="373" height="72" viewBox="0 0 373 72" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M22.7172 5.28344C24.8781 2.28016 28.3521 0.5 32.052 0.5H340.948C344.648 0.5 348.122 2.28016 350.283 5.28344L372.384 36L350.283 66.7166C348.122 69.7198 344.648 71.5 340.948 71.5H32.052C28.3521 71.5 24.8781 69.7198 22.7172 66.7166L0.615976 36L22.7172 5.28344Z" fill="white" stroke="%23FF8B37"/></svg>');
+}
+
+.answerOption::before,
+.answerOption::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    width: calc(50% - 187px);
+    transform: translate(0, -50%);
+    height: 1px;
+    background-color: var(--black-40);
+}
+
+.answerOption::before {
+    left: 0;
+}
+
+.answerOption::after {
+    right: 0;
+}
+
+.answerLetter {
+    position: absolute;
+    left: calc(50% - 162px);
+    font-size: 20px;
+    line-height: 24px;
+    font-weight: 600;
+    color: var(--orange-100);
+}
+
+.selected {
+    background: url('data:image/svg+xml,<svg width="373" height="72" viewBox="0 0 373 72" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M22.7172 5.28344C24.8781 2.28016 28.3521 0.5 32.052 0.5H340.948C344.648 0.5 348.122 2.28016 350.283 5.28344L372.384 36L350.283 66.7166C348.122 69.7198 344.648 71.5 340.948 71.5H32.052C28.3521 71.5 24.8781 69.7198 22.7172 66.7166L0.615976 36L22.7172 5.28344Z" fill="%23FFF3EB" stroke="%23FF8B37"/></svg>');
+}
+
+.correct {
+    background: url('data:image/svg+xml,<svg width="373" height="72" viewBox="0 0 373 72" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M22.7172 5.28344C24.8781 2.28016 28.3521 0.5 32.052 0.5H340.948C344.648 0.5 348.122 2.28016 350.283 5.28344L372.384 36L350.283 66.7166C348.122 69.7198 344.648 71.5 340.948 71.5H32.052C28.3521 71.5 24.8781 69.7198 22.7172 66.7166L0.615976 36L22.7172 5.28344Z" fill="%23E6FAEA" stroke="%2347D867"/></svg>');
+}
+
+.incorrect {
+    background: url('data:image/svg+xml,<svg width="373" height="72" viewBox="0 0 373 72" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M22.7172 5.28344C24.8781 2.28016 28.3521 0.5 32.052 0.5H340.948C344.648 0.5 348.122 2.28016 350.283 5.28344L372.384 36L350.283 66.7166C348.122 69.7198 344.648 71.5 340.948 71.5H32.052C28.3521 71.5 24.8781 69.7198 22.7172 66.7166L0.615976 36L22.7172 5.28344Z" fill="%23FDEEED" stroke="%23EC6259"/></svg>');
+}
+
+@media (max-width: 767px) {
+    .answerOption {
+        width: 288px;
+        padding: 10px 20px 10px 50px;
+        font-size: 18px;
+        height: 56px;
+        background: url('data:image/svg+xml,<svg width="288" height="56" viewBox="0 0 288 56" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M16.8175 5.31576C18.9762 2.29361 22.4615 0.5 26.1754 0.5H261.825C265.539 0.5 269.024 2.29361 271.183 5.31576L287.386 28L271.183 50.6842C269.024 53.7064 265.539 55.5 261.825 55.5H26.1754C22.4615 55.5 18.9762 53.7064 16.8175 50.6842L0.614452 28L16.8175 5.31576Z" fill="white" stroke="%23D0D0D8"/></svg>');
+    }
+
+    .answerOption::before,
+    .answerOption::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            width: calc(50% - 144px);
+            transform: translate(0, -50%);
+            height: 1px;
+            background-color: var(--black-40);
+    }
+
+    .answerLetter {
+        left: calc(50% - 124px);
+
+        font-size: 18px;
+    }
+
+    .correct {
+        background: url('data:image/svg+xml,<svg width="288" height="56" viewBox="0 0 288 56" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M16.8175 5.31576C18.9762 2.29361 22.4615 0.5 26.1754 0.5H261.825C265.539 0.5 269.024 2.29361 271.183 5.31576L287.386 28L271.183 50.6842C269.024 53.7064 265.539 55.5 261.825 55.5H26.1754C22.4615 55.5 18.9762 53.7064 16.8175 50.6842L0.614452 28L16.8175 5.31576Z" fill="%23E6FAEA" stroke="%2347D867"/></svg>');
+    }
+
+    .incorrect{
+       background: url('data:image/svg+xml,<svg width="288" height="56" viewBox="0 0 288 56" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M16.8175 5.31576C18.9762 2.29361 22.4615 0.5 26.1754 0.5H261.825C265.539 0.5 269.024 2.29361 271.183 5.31576L287.386 28L271.183 50.6842C269.024 53.7064 265.539 55.5 261.825 55.5H26.1754C22.4615 55.5 18.9762 53.7064 16.8175 50.6842L0.614452 28L16.8175 5.31576Z" fill="%23FDEEED" stroke="%23EC6259"/></svg>');
+    }
+}

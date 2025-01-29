@@ -1,0 +1,62 @@
+.rewordStepContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    width: 100%;
+}
+
+.rewordStepBox {
+    width: 240px;
+    height: 32px;
+    background: url('data:image/svg+xml,<svg width="240" height="32" viewBox="0 0 240 32" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M21.4944 0.5H218.506C221.474 0.5 224.328 1.64809 226.47 3.70404L239.278 16L226.47 28.296C224.328 30.3519 221.474 31.5 218.506 31.5H21.4944C18.5256 31.5 15.6719 30.3519 13.5303 28.296L0.721988 16L13.5303 3.70404C15.6719 1.64809 18.5256 0.5 21.4944 0.5Z" fill="white" stroke="%23D0D0D8"/></svg>') no-repeat center center;
+    background-size: cover;
+
+}
+
+.rewordStepBox::before,
+.rewordStepBox::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    width: calc(50% - 120px);
+    transform: translate(0, -50%);
+    height: 1px;
+    background-color: var(--black-40);
+}
+
+.rewordStepBox::before {
+    left: 0;
+}
+
+.rewordStepBox::after {
+    right: 0;
+}
+
+.upcoming > p {
+    color: var(--black-100);
+}
+
+.active {
+    background: url('data:image/svg+xml,<svg width="240" height="32" viewBox="0 0 240 32" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M21.4944 0.5H218.506C221.474 0.5 224.328 1.64809 226.47 3.70404L239.278 16L226.47 28.296C224.328 30.3519 221.474 31.5 218.506 31.5H21.4944C18.5256 31.5 15.6719 30.3519 13.5303 28.296L0.721988 16L13.5303 3.70404C15.6719 1.64809 18.5256 0.5 21.4944 0.5Z" fill="white" stroke="%23E87928"/></svg>') no-repeat center center;
+}
+
+.active > p {
+    color: var(--orange-120);
+}
+
+.active::before,
+.active::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    width: calc(50% - 120px);
+    transform: translate(0, -50%);
+    height: 1px;
+    background-color: var(--orange-120);
+}
+
+.pass > p {
+    color: var(--black-40);
+    
+}

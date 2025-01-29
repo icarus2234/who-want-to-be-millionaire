@@ -1,7 +1,7 @@
 export enum Routes {
   Home = '/',
-  Quiz = '/game',
-  End = '/end',
+  Quiz = '/quiz',
+  EndGame = '/end-game',
 }
 
 export type Question = {
@@ -16,3 +16,19 @@ export type GameConfig = {
   currency: string;
   questions: Question[];
 };
+
+export type ExtractVariables<T> = T extends { variables: object }
+  ? T['variables']
+  : never;
+
+export enum RewordStepStatus {
+  Active = 'active',
+  Pass = 'pass',
+  Upcoming = 'upcoming',
+}
+
+export interface RewardStep {
+  status: RewordStepStatus;
+  reward: number;
+  currencySign: string;
+}

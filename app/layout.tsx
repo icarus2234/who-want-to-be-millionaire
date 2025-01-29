@@ -1,35 +1,35 @@
-import 'normalize.css';
+'use client';
+
+import '@/styles/reset.css';
 import '@/styles/global.css';
 
 import classNames from 'classnames';
-import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
+import { usePathname } from 'next/navigation';
 
-import { homePageMetaDataContent } from '@/helpers';
 import { MainContainer } from '@/modules/layout/main-container';
-import backgroundStyles from '@/styles/backgrounds.module.css';
+import { mapBackgroundStylesByRoute } from '@/helpers';
 
 const inter = Inter({
   subsets: ['latin'],
   variable: '--font-inter',
 });
 
-export const metadata: Metadata = {
-  // metadataBase: new URL(`https://${baseURL}`),
-  title: homePageMetaDataContent.title,
-  description: homePageMetaDataContent.description,
-  openGraph: homePageMetaDataContent.openGraph,
-  robots: homePageMetaDataContent.robots,
-};
-
 export default function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const pathname = usePathname();
+
   return (
     <html lang="en">
-      <body className={classNames(inter.variable, backgroundStyles.home)}>
+      <body
+        className={classNames(
+          inter.variable,
+          mapBackgroundStylesByRoute(pathname)
+        )}
+      >
         <MainContainer>{children}</MainContainer>
       </body>
     </html>

@@ -4,24 +4,40 @@ import { FC } from 'react';
 import styles from './answer.module.css';
 
 interface AnswerOptionProps {
-  option: string;
+  answerText: string;
   isSelected: boolean;
   isCorrect: boolean;
-  onSelect: (option: string) => void;
+  isIncorrect: boolean;
+  answerIndex: number;
+  handleAnswerSelect: (index: number) => void;
 }
 
 export const AnswerOption: FC<AnswerOptionProps> = ({
-  option,
+  answerText,
+  answerIndex,
   isSelected,
   isCorrect,
-  onSelect,
+  isIncorrect,
+  handleAnswerSelect,
 }) => {
+  const answerStyles = classNames(styles.answerOption, {
+    [styles.selected]: isSelected,
+    [styles.correct]: isCorrect && isSelected,
+    [styles.incorrect]: isIncorrect && isSelected,
+  });
+
+  const onSelect = () => {
+    handleAnswerSelect(answerIndex);
+  };
+
   return (
-    <button
-      className={classNames(styles.button)}
-      onClick={() => onSelect(option)}
-    >
-      {option}
-    </button>
+    <div className={styles.answerOptionContainer}>
+      <button className={answerStyles} onClick={onSelect}>
+        <span className={styles.answerLetter}>
+          {String.fromCharCode(65 + answerIndex)}
+        </span>
+        {answerText}
+      </button>
+    </div>
   );
 };

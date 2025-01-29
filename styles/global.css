@@ -7,16 +7,19 @@
     --green-5: #E6FAEA;
     --red-100: #EC6259;
     --red-5: #FDEEED;
-    --black-100: #2ecc71;
-    --black-40: #34495e;
-    --black-5: #34495e;
+    --black-100: #1C1C21;
+    --black-40: #D0D0D8;
+    --black-5: #F5F5F7;
     --white-100: #ffffff;
     --font-size: 20px;
     --line-height: 24px;
+    --font-inter: 'Inter', sans-serif;
 }
 
 
 body {
+    font-family: var(--font-inter);
     font-size: var(--font-size);
     line-height: var(--line-height);
+    margin: none;
 }

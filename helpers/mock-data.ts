@@ -1,0 +1,91 @@
+import { GameConfig } from './types';
+
+export const gameConfig: GameConfig = {
+  currency: '$',
+  questions: [
+    {
+      id: 1,
+      questionTitle: 'What is the capital of France?',
+      answers: ['Paris', 'London', 'Berlin', 'Madrid'],
+      correctAnswers: [0],
+      reward: 100,
+    },
+    {
+      id: 2,
+      questionTitle: 'How many planets are in the Solar System?',
+      answers: ['7', '8', '9', '10'],
+      correctAnswers: [1],
+      reward: 200,
+    },
+    {
+      id: 3,
+      questionTitle: 'What is the chemical symbol for hydrogen?',
+      answers: ['O', 'H', 'C', 'N'],
+      correctAnswers: [1],
+      reward: 300,
+    },
+    {
+      id: 4,
+      questionTitle: 'What is the largest desert in the world?',
+      answers: ['Sahara', 'Antarctica', 'Gobi', 'Kalahari'],
+      correctAnswers: [1],
+      reward: 500,
+    },
+    {
+      id: 5,
+      questionTitle: 'How many colors are in the rainbow?',
+      answers: ['5', '6', '7', '8'],
+      correctAnswers: [2],
+      reward: 1000,
+    },
+    {
+      id: 6,
+      questionTitle: 'What is the largest ocean on Earth?',
+      answers: ['Pacific', 'Atlantic', 'Indian', 'Arctic'],
+      correctAnswers: [0],
+      reward: 2000,
+    },
+    {
+      id: 7,
+      questionTitle: 'In which year did World War II begin?',
+      answers: ['1935', '1939', '1941', '1945'],
+      correctAnswers: [1],
+      reward: 4000,
+    },
+    {
+      id: 8,
+      questionTitle: 'Which country has the largest land area?',
+      answers: ['Canada', 'China', 'USA', 'Russia'],
+      correctAnswers: [3],
+      reward: 8000,
+    },
+    {
+      id: 9,
+      questionTitle: 'What is the chemical formula for water?',
+      answers: ['H2', 'H2O', 'O2', 'HO2'],
+      correctAnswers: [1],
+      reward: 16000,
+    },
+    {
+      id: 10,
+      questionTitle: 'Which continent has the largest population?',
+      answers: ['Africa', 'Asia', 'Europe', 'South America'],
+      correctAnswers: [1],
+      reward: 32000,
+    },
+    {
+      id: 11,
+      questionTitle: 'What is Earths only natural satellite?',
+      answers: ['Moon', 'Mars', 'Sun', 'Jupiter'],
+      correctAnswers: [0],
+      reward: 125000,
+    },
+    {
+      id: 12,
+      questionTitle: 'Who wrote `Hamlet`?',
+      answers: ['Dante', 'Shakespeare', 'Goethe', 'Homer'],
+      correctAnswers: [1],
+      reward: 1000000,
+    },
+  ],
+};

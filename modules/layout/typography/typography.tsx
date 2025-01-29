@@ -3,16 +3,16 @@ import { FC, HTMLAttributes, ReactNode } from 'react';
 
 import styles from './typography.module.css';
 
-type TypographyVariants = 'heading1' | 'heading2' | 'body';
+type TypographyVariants = 'heading1' | 'heading2' | 'body' | 'body2';
 
 interface TypographyProps extends HTMLAttributes<HTMLElement> {
-  variant: TypographyVariants;
+  variant?: TypographyVariants;
   children: ReactNode;
   className?: string;
 }
 
 export const Typography: FC<TypographyProps> = ({
-  variant,
+  variant = 'body',
   children,
   className = '',
   ...props

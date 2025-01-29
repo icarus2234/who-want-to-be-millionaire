@@ -1,31 +1,13 @@
-'use client';
+import type { Metadata } from 'next';
 
-import { useState } from 'react';
+import { homePageMetaDataContent } from '@/helpers';
+import { gameConfig } from '@/helpers';
+import { HomeTemplate } from '@/modules/home/templates/home-template';
 
-import { AnswerOption } from '@/modules/quiz/components/answer-option';
+export const metadata: Metadata = homePageMetaDataContent;
 
-export default function Home() {
-  const [selectedOption, setSelectedOption] = useState<string | null>(null);
-  const correctOption = 'Option 2';
+export default async function HomePage() {
+  // const gameConfig = await getGameConfig(); example of request
 
-  const options = ['Option 1'];
-
-  const handleSelect = (option: string) => {
-    setSelectedOption(option);
-  };
-
-  return (
-    <div>
-      <h1>Welcome to Who Wants to Be a Millionaire!</h1>
-      {options.map((option) => (
-        <AnswerOption
-          key={option}
-          option={option}
-          isSelected={selectedOption === option}
-          isCorrect={option === correctOption}
-          onSelect={handleSelect}
-        />
-      ))}
-    </div>
-  );
+  return <HomeTemplate gameConfig={gameConfig} />;
 }

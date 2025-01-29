@@ -1,7 +1,7 @@
 import { useEffect } from 'react';
 
-import useQuizStore from '@/store/quiz-store';
 import { GameConfig } from '@/helpers';
+import useQuizStore from '@/store/quiz-store';
 
 export const useCreateQuiz = (gameConfig: GameConfig) => {
   const { setGameConfig, initRewardList } = useQuizStore();

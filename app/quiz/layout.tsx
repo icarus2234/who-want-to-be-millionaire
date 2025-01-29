@@ -1,9 +1,11 @@
 'use client';
 
-import { useState, ReactNode } from 'react';
+import { ReactNode, useState } from 'react';
+
 import useMediaQuery from '@/helpers/hooks/useMediaQuery';
 import { RewardList } from '@/modules/quiz/components';
 import useQuizStore from '@/store/quiz-store';
+
 import styles from './layout.module.css';
 
 export default function Layout({ children }: { children: ReactNode }) {

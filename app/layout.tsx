@@ -7,8 +7,8 @@ import classNames from 'classnames';
 import { Inter } from 'next/font/google';
 import { usePathname } from 'next/navigation';
 
-import { MainContainer } from '@/modules/layout/main-container';
 import { mapBackgroundStylesByRoute } from '@/helpers';
+import { MainContainer } from '@/modules/layout/main-container';
 
 const inter = Inter({
   subsets: ['latin'],

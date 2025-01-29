@@ -1,7 +1,8 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
-import { Typography } from '@/modules/layout';
+
 import { notFoundMetaDataContent } from '@/helpers';
+import { Typography } from '@/modules/layout';
 
 export const metadata: Metadata = notFoundMetaDataContent;
 

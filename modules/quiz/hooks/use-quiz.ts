@@ -1,3 +1,5 @@
+'use client';
+
 import { useRouter } from 'next/navigation';
 import { useEffect, useState } from 'react';
 
@@ -11,10 +13,6 @@ export const useQuiz = () => {
   const [selectedAnswers, setSelectedAnswers] = useState<number[]>([]);
 
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
-
-  if (!gameConfig) {
-    throw new Error('Game configuration is missing');
-  }
 
   const currentQuestion = gameConfig?.questions[currentQuestionIndex];
 
@@ -31,7 +29,7 @@ export const useQuiz = () => {
 
   const goToNextQuestion = () => {
     setSelectedAnswers([]);
-    if (currentQuestionIndex < gameConfig?.questions.length - 1) {
+    if (gameConfig && currentQuestionIndex < gameConfig.questions.length - 1) {
       setCurrentQuestionIndex((prevIndex) => prevIndex + 1);
       nextRewardStep();
     } else {

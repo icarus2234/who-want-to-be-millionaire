@@ -1,11 +1,12 @@
 import { FC } from 'react';
 
+import { RewardStep as RewardStepType } from '@/helpers';
 import { RewardStep } from '@/modules/quiz/components/reward-step';
 
 import styles from './reward-list.module.css';
 
 interface RewardListProps {
-  rewards: any;
+  rewards: RewardStepType[];
 }
 
 export const RewardList: FC<RewardListProps> = ({ rewards }) => {

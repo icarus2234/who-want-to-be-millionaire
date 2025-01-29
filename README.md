@@ -1,47 +1,40 @@
-# Demo
+# Who Wants to Be a Millionaire?
 
-[Video](https://www.loom.com/share/3fceabbbac564c628a8110df66d2e47e)
+A simple quiz game inspired by the popular TV show "Who Wants to Be a Millionaire?".
 
-# Module Structure
+[Demo]()
 
-## File History
+### Installation
 
-### Components
+1. Clone the repository:
+   ```sh
+   git clone https://github.com/icarus2234/who-want-to-be-millionaire.git
+   cd who-wants-to-be-millionaire
+   ```
+2. Install dependencies:
 
-- **HistorySidebar**: A sidebar component that displays a list of previously converted files. Each file is represented as a clickable button.
+   ```sh
+   pnpm install
+   ```
 
-### Hooks
+3. Start the development server:
 
-- **useFileHistory**: A custom hook that manages the file history state, including adding new files to the history and retrieving the history from local storage.
+   ```sh
+    pnpm dev
+   ```
 
-## Layout
+### Project Structure
 
-### Components
+The project is structured based on modules, making it easy to manage and scale. Here is an overview of the main modules:
 
-- **Header**: A fixed header component that displays the title of the application.
-- **MainContainer**: A container component that wraps the main content of the application.
-- **TextArea**: A styled text area component for user input.
-- **Button**: A styled button component with customizable text and click handler.
+## Home
 
-## PDF Converter
+The home module contains the home page of the application. It displays the game title and a button to start the game. This module initializes the game and navigates to the game module when the start button is clicked.
 
-### Components
+## Quiz
 
-- **PDFViewerContainer**: A component that displays a PDF document using the `react-pdf` library.
-- **ContentToolBar**: A toolbar component that provides options for interacting with the PDF content.
+The quiz module contains the game logic and components. It displays the questions, answers. It also handles the user's answer selection and displays the rewards based on the user's progress.
 
-### Hooks
+## End Game
 
-- **usePDFConverter**: A custom hook that handles converting text to a PDF by calling an API and updating the file history.
-
-# Improvements
-
-- Due to third party PDF rendering library, the app have UI issues with PDF display.
-
-- To remove props drilling, we can use context API or state management, also can help to organize logic in more structured way (Need more time to implement).
-
-- Need to organize tailwindcss classes in more structured way. (I am not familiar with tailwindcss, so i have no time to do this).
-
-- For this test task we truly don't need next js, it can be a great scalable solution for future with all the features it provides. (I made this decision because i have own template with next js and all adjustments, that i don`t need to spend time on setup).
-
-- Add pre-commit hooks and pre push hooks, for eslint, build, tests.
+The end game module displays the final result of the game. It shows the total reward won by the user and a button to restart the game. Also it clean store from game data.

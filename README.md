@@ -2,7 +2,7 @@
 
 A simple quiz game inspired by the popular TV show "Who Wants to Be a Millionaire?".
 
-[Demo]()
+[Demo](https://who-want-to-be-millionaire-9tu3.vercel.app/)
 
 ### Installation
 
